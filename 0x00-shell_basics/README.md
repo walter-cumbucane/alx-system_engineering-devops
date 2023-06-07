@@ -5,3 +5,4 @@
 4-listmorefiles -> displays current directory files on a long view, including the hidden ones
 5-listfilesdigitonly -> displays current directory files on a long view, including the hidden ones and with the ownership expressed in ids
 6-firstdirectory -> creates a /tmp/my_first_directory 
+7-movethatfile -> moves the file /tmp/betty to the repository created in 6
