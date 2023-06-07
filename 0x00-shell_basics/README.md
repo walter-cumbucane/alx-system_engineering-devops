@@ -13,3 +13,4 @@
 12-file_type -> prints the file type of /tmp/iamafile
 13-symbolic_link -> creates a symbolic link to /bin/ls
 14-copy_html ->copy all html files to the parent directory only if they don't exist there
+101-clean_emacs -> deletes all the files in the directory that end with '~'
