@@ -2,7 +2,7 @@
 #This is displaying "Best School" 10 times via until loops
 
 i=10
-until [ "$i" -le 1 ]
+until [ "$i" -eq 0 ]
 do
     echo "Best School"
     ((i--))
