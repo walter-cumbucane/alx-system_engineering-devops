@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Prints hi in the 9th iteration and Best Scholl in the others
+
+i=1
+while [ "$i" -le 10 ]
+do
+    if [ "$i" -eq 9 ]
+    then
+        echo "Hi"
+    else
+        echo "Best School"
+    fi
+    ((i++))
+done
