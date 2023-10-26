@@ -3,7 +3,7 @@
 
 for i in $(seq 1 10)
 do
-    if [$i -eq 10]
+    if [ "$i" -eq 10 ]
     then
         echo -n "Best School"
     else
