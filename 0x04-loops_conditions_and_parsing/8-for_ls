@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Parses an input data using the cut command
+
+files=$(ls)
+for _ in $files
+do
+    echo "$_"  | cut -d "-" -f 2
+done
