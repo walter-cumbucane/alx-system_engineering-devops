@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Stops a process without using kill or killall
+
+pkill -15 -f "bash ./7-highlander"

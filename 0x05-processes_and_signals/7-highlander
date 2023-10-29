@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#uses the trap command
+# shellcheck disable=SC2050
+
+command(){
+    echo "I am invicible!!!"
+}
+trap command TERM
+
+while [ 5 -le 10 ]
+do
+    echo "To infinty and beyond"
+    sleep 2
+done
