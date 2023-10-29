@@ -5,7 +5,7 @@
 command(){
     echo "I am invincible!!!"
 }
-trap command 15
+trap command TERM
 while [ 5 -le 10 ]
 do
     echo "To infinty and beyond"
