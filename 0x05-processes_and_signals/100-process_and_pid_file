@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#This is a very stubborn process
+# shellcheck disable=SC2078
+
+touch /var/run/my_script.pid
+echo "$$" > /var/run/my_script.pid
+sig_term(){
+    echo "I hate the kill command"
+    rm /var/run/my_script.pid
+    exit
+}
+
+sig_int(){
+    echo "Y U no love me?!"
+}
+
+sig_quit_or_sig_term(){
+    rm /var/run/my_script.pid
+    exit
+}
+
+trap sig_term TERM
+trap sig_int INT
+trap sig_quit_or_sig_term QUIT
+
+while [ True ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
