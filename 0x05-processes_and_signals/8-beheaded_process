@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#forcefully kills an unresponsive process to SIGTERM
+
+pid=$(pgrep -f "bash ./7-highlander")
+if [ -n "$pid" ]
+then
+    kill -9 "$pid"
+fi
