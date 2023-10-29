@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Runs an infinite loop until receiving a SIGTERM signal
+# shellcheck disable=SC2050
+
+while [ 7 -le 10 ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
