@@ -3,7 +3,7 @@
 # shellcheck disable=SC2050
 
 command(){
-    echo "I am invicible!!!"
+    echo "I am invincible!!!"
 }
 trap command 15
 while [ 5 -le 10 ]
