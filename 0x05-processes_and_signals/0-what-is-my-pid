@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #Ilustrates the script pid when runned
 
-pid=$(pidof $0)
+pid=$$
 echo "$pid"
