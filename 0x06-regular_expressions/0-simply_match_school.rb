@@ -1,9 +1,8 @@
 #!/usr/bin/env ruby
-require "oniguruma"
 
-regex = Oniguruma::ORegexp.new("/School/")
-argument = ARGV[1]
-match_data = regex.match(argument)
-if match_data
-    puts "#{match_data}"
+argument = ARGV[0]
+if not argument
+    puts "Insert an argument to look for matching expressions"
+else
+    puts argument.scan(/School/).join
 end
