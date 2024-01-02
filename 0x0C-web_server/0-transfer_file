@@ -9,8 +9,5 @@ fi
 file_path=$1
 server=$2
 username=$3
-if [ $# -eq 4 ]
-then
-    private_key=$4
-fi
-scp -i "$private_key" "$file_path" "$username"@"$server":~/
+private_key=$4
+scp -o "StrictHostKeyChecking=no" -i "$private_key" "$file_path" "$username"@"$server":~/
