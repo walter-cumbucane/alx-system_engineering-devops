@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Creates a pair or keys using the rsa algorithm and protected by a
+#passphrase
+ssh-keygen -t rsa -f school -b 4096 -N "Alx Africa Baby"
