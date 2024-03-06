@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Securely transfers a file to a remote server
+
+path=$1;
+ip=$2;
+username=$3;
+priv_key=$4;
+
+if [ $# -ne 4 ]
+then
+	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+else
+	scp  -o "StrictHostKeyChecking=no" -i "$priv_key" "$path" "$username"@"$ip":~/
+fi
