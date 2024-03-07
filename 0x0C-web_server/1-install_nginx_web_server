@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Install nginx on a server
+
+sudo apt install nginx
+cat "Hello World!" > /var/www/html/index.thml
