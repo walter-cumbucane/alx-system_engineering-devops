@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Adds a custom header to the nginx response
+
+hostname=$(hostname)
+sudo echo "add-header X-Served-By $hostname" >> /etc/nginx/sites-available/default
