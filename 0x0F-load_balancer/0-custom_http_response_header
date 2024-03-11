@@ -3,3 +3,4 @@
 
 hostname=$(hostname)
 sudo sed -i "/listen 80 default_server;/a add-header X-Server-By $hostname;" /etc/nginx/sites-available/default
+sudo service nginx restart
