@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 #Adds a custom header to the nginx response
 
+#Installs nginx
+apt install nginx
+
+#Allows http traffic through the firewall
+ufw allow 'Nginx HTTP'
+
+echo "Hello World!\n" | sudo tee /var/www/html/index.html
+sed -i '/listen 80 default_server;/a /redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 hostname=$(hostname)
-sudo sed -i "/listen 80 default_server;/a add-header X-Server-By $hostname;" /etc/nginx/sites-available/default
-sudo service nginx restart
+sed -i "/listen 80 default_server;/a add-header X-Server-By $hostname;" /etc/nginx/sites-available/default
+service nginx start
