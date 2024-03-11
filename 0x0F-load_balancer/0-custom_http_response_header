@@ -7,7 +7,7 @@ apt install nginx
 #Allows http traffic through the firewall
 ufw allow 'Nginx HTTP'
 
-echo "Hello World!\n" | sudo tee /var/www/html/index.html
+printf "Hello World!\n" | sudo tee /var/www/html/index.html
 sed -i '/listen 80 default_server;/a /redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 hostname=$(hostname)
 sed -i "/listen 80 default_server;/a add-header X-Server-By $hostname;" /etc/nginx/sites-available/default
