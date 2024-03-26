@@ -7,6 +7,9 @@ from sys import argv
 
 
 def main():
+    """
+        Code Logic here
+    """
     user_id = int(argv[1])
     total_tasks = 0
     completed_tasks = 0
