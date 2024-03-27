@@ -30,7 +30,9 @@ def main():
     csv_file_name = f'{user_id}.csv'
     field_names = ['USER_ID', 'USER', 'STATUS', 'TITLE']
     with open(csv_file_name, mode='w', newline='') as file:
-        writer = csv.DictWriter(file, fieldnames=field_names)
+        writer = csv.DictWriter(
+                               file, fieldnames=field_names,
+                               quoting=csv.QUOTE_ALL)
         for row in data:
             writer.writerow(row)
 
