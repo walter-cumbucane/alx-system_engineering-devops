@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    Gathers data from an API and exports to a json file
+"""
 import json
 from requests import get
 from sys import argv
